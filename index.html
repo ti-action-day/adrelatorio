@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório Diário - AD Odonto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="form-container">
+
+      <div class="logo-box">
+        <img src="ad odonto action.png" alt="AD Odonto" class="logo" />
+      </div>
+
+      <h1>Relatório Diário de Oportunidades</h1>
+      <p class="subtitle">
+        Captação e agendamento — preenchimento diário ao final do expediente.
+      </p>
+
+      <form id="reportForm">
+        <div class="question">
+          <label>📅 Data</label>
+          <input type="date" id="data" required />
+        </div>
+
+        <div class="question">
+          <label>📲 Quantidade recebida</label>
+          <input type="number" id="recebida" min="0" required />
+        </div>
+
+        <div class="question">
+          <label>🖥️ Quantidade cadastrada no CRM</label>
+          <input type="number" id="cadastrada" min="0" required />
+        </div>
+
+        <div class="question">
+          <label>💬 Atenderam/Responderam no dia</label>
+          <input type="number" id="responderam" min="0" required />
+        </div>
+
+        <div class="question">
+          <label>📆 Agendamentos no dia</label>
+          <input type="number" id="agendamentos" min="0" required />
+        </div>
+
+        <div class="question">
+          <label>🔁 Resgates 1</label>
+          <input type="number" id="resgates1" min="0" required />
+        </div>
+
+        <div class="question">
+          <label>🔁 Resgates 2</label>
+          <input type="number" id="resgates2" min="0" required />
+        </div>
+
+        <h2>🚨 Não conformidades</h2>
+
+        <div class="question">
+          <label>👎 Leads abaixo de 40 anos</label>
+          <input type="number" id="abaixo40" min="0" required />
+        </div>
+
+        <div class="question">
+          <label>🌎 Fora da localização</label>
+          <input type="number" id="foraLocalizacao" min="0" required />
+        </div>
+
+        <div class="question">
+          <label>✍️ Observações</label>
+          <textarea id="observacoes" placeholder="Digite as principais informações do dia..."></textarea>
+        </div>
+
+        <button type="submit">Enviar relatório</button>
+
+        <p id="statusMessage"></p>
+      </form>
+    </section>
+
+    <footer>
+      © 2026 AD Odonto — Estratégia, Tecnologia e Crescimento
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
